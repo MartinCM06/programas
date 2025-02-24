@@ -21,14 +21,14 @@
         </select><br><br>
 
         <div id="campos">
-            <!-- Aquí se generarán los campos dinámicamente en función de la figura seleccionada -->
+          
         </div>
 
         <button type="submit">Calcular</button>
     </form>
 
     <?php
-    // Funciones de cálculo (las mismas que antes)
+    
     function area_circulo($radio) {
         return pi() * pow($radio, 2);
     }
@@ -85,7 +85,7 @@
         return 2 * pi() * $radio * ($radio + $altura);
     }
 
-    // Procesamiento de datos
+   
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $figura = $_POST['figura'];
         echo "<h2>Resultados para la figura seleccionada: $figura</h2>";
@@ -143,7 +143,7 @@
     ?>
 
     <script>
-        // Código JavaScript para mostrar campos dinámicamente según la figura seleccionada
+      
         const figuraSelect = document.getElementById('figura');
         const camposDiv = document.getElementById('campos');
 
@@ -174,7 +174,7 @@
             }
         });
 
-        // Activar la función para mostrar los campos al inicio
+      
         figuraSelect.dispatchEvent(new Event('change'));
     </script>
 </body>
